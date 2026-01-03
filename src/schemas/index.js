@@ -14,4 +14,11 @@ export {
   YearlyIncomeResponse,
   IncomeSourceOptionSchema,
   IncomeSourcesResponse,
+  IndustrySchema,
+  OccupationSchema,
+  IndustriesResponse,
+  OccupationsResponse,
+  OccupationsErrorResponse,
+  UsageActivitySchema,
+  UsageActivitiesResponse,
 } from "./typebox.js";

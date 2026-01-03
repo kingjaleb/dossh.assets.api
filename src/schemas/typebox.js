@@ -108,3 +108,50 @@ export const IncomeSourcesResponse = Type.Object({
   payload: Type.Array(IncomeSourceOptionSchema),
   message: Type.String(),
 });
+
+// Industries & Occupations schemas
+export const IndustrySchema = Type.Object({
+  id: Type.Number(),
+  name: Type.String(),
+});
+
+export const OccupationSchema = Type.Object({
+  id: Type.Number(),
+  name: Type.String(),
+});
+
+export const IndustriesResponse = Type.Object({
+  success: Type.Boolean(),
+  status: Type.Number(),
+  industries: Type.Array(IndustrySchema),
+  message: Type.String(),
+});
+
+export const OccupationsResponse = Type.Object({
+  success: Type.Boolean(),
+  status: Type.Number(),
+  industry_id: Type.Number(),
+  industry_name: Type.String(),
+  occupations: Type.Array(OccupationSchema),
+  message: Type.String(),
+});
+
+export const OccupationsErrorResponse = Type.Object({
+  success: Type.Boolean(),
+  status: Type.Number(),
+  message: Type.String(),
+});
+
+// Usage Activities schemas
+export const UsageActivitySchema = Type.Object({
+  id: Type.Number(),
+  code: Type.String(),
+  display_label: Type.String(),
+});
+
+export const UsageActivitiesResponse = Type.Object({
+  success: Type.Boolean(),
+  status: Type.Number(),
+  payload: Type.Array(UsageActivitySchema),
+  message: Type.String(),
+});
